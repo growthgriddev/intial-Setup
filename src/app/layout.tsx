@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./3d-effects.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "GrowthGrid — Turn Local Searches Into Paying Customers",
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

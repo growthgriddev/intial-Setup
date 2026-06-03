@@ -250,29 +250,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== FOOTER ===== */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-brand">
-              <Link href="#" className="navbar-brand" style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-                <img src="/logo.png" alt="GrowthGrid Logo" style={{ height: '30px', objectFit: 'contain' }} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
-                GrowthGrid
-              </Link>
-              <p>Your Growth, Our Grid</p>
-            </div>
-            <div className="footer-nav">
-              <Link href="#home">Home</Link>
-              <Link href="#services">Services</Link>
-              <Link href="#process">Process</Link>
-              <Link href="#contact">Contact</Link>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            <p>&copy; 2026 GrowthGrid. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+
     </main>
   );
 }
