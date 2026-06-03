@@ -42,6 +42,20 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealElements.forEach(el => revealObserver.observe(el));
 
+// ===== PARALLAX ORBS =====
+const orbs = document.querySelectorAll('.orb');
+window.addEventListener('mousemove', (e) => {
+  orbs.forEach((orb, index) => {
+    const speed = (index + 1) * 30;
+    const xOffset = (window.innerWidth / 2 - e.clientX) / speed;
+    const yOffset = (window.innerHeight / 2 - e.clientY) / speed;
+    // We combine with the CSS animation by setting a CSS variable, or just using transform.
+    // Setting transform in JS overrides CSS animation, so let's set CSS variables.
+    orb.style.setProperty('--tx', `${xOffset}px`);
+    orb.style.setProperty('--ty', `${yOffset}px`);
+  });
+});
+
 // ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {

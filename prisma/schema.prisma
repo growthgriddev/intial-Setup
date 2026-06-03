@@ -1,0 +1,21 @@
+datasource db {
+  provider = "sqlite"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Blog {
+  id        Int      @id @default(autoincrement())
+  title     String
+  content   String
+  slug      String   @unique
+  createdAt DateTime @default(now())
+}
+
+model Seo {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+}
